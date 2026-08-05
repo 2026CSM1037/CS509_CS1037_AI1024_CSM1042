@@ -52,7 +52,10 @@ void executeDFS(string fileName){
             graph[vertex].push_back(neighbor);
         }
     }
-
+    string s;
+    fin>>s;
+    int src;
+    fin>>src;
     fin.close();
 
     int offset[MAX_SIZE];
@@ -81,13 +84,10 @@ void executeDFS(string fileName){
     fill(visited,visited+MAX_SIZE,false);
 
     fout<<"Algorithm : DFS"<<endl;
-    fout<<"Source : 0"<<endl;
+    fout<<"Source : "<<src<<endl;
     fout<<"Traversal"<<endl;
 
-    for(int i=0;i<vertices;i++){
-        if(!visited[i])
-            dfsCSR(i,offset,intermediate,visited,fout);
-    }
+    dfsCSR(src,offset,intermediate,visited,fout);
 
     fout<<endl;
 

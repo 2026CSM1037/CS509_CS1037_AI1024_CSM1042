@@ -24,11 +24,8 @@ int main(){
     else if(choice==2){
 
         int testNo=1;
-
         while(true){
-
             string fileName="graph_test_0"+to_string(testNo)+".txt";
-
             ifstream fin(fileName);
 
             if(!fin){
@@ -36,9 +33,7 @@ int main(){
             }
 
             fin.close();
-
             executeDFS(fileName);
-
             testNo++;
         }
     }
