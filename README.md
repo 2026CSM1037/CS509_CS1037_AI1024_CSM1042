@@ -1,4 +1,1 @@
-# CS509_CS1037_AI1024
-HELLO WORLD
-
-Update 1 test commit 
+Detailed readme for each of the different projects are attached within respective folders
