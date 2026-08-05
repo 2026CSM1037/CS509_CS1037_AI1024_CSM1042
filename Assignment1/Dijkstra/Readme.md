@@ -6,8 +6,7 @@ g++ -std=c++17 -O2 driver/driver.cpp src/dijkstra.cpp -o dijkstra.exe
 
 - **Algorithm:** Dijkstra (CSR Representation)
 - **Language:** C++
-- **Compiler:** g++ (C++17)
-- **Source Vertex:** 0
+- **Compiler:** g++ 
 
 ---
 
