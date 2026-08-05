@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
 
-    ifstream fin("graph_test_02.txt");
+    ifstream fin("graph_test_01.txt");
 
     if(!fin) {
         cout << "File not found\n";
