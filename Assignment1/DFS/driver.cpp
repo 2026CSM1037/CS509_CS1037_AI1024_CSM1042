@@ -15,7 +15,7 @@ int main(){
     if(choice==1){
 
         int testNo;
-        cout<<"Enter test case number : ";
+        cout<<"Enter test case number (1-6): ";
         cin>>testNo;
 
         string fileName="graph_test_0"+to_string(testNo)+".txt";
