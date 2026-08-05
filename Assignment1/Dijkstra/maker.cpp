@@ -4,8 +4,8 @@ using namespace std;
 
 int main(){
 
-    int vertices = 10000;
-    int maxOutDegree = 20;
+    int vertices = 100000;
+    int maxOutDegree = 22;
 
     random_device rd;
     mt19937 gen(rd());
@@ -14,7 +14,7 @@ int main(){
     uniform_int_distribution<int> degreeDist(0,maxOutDegree);
     uniform_int_distribution<int> vertexDist(0,vertices-1);
 
-    ofstream fout("graph_test_03.txt");
+    ofstream fout("graph_test_05.txt");
 
     vector<vector<pair<int,int>>> graph;
 
