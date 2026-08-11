@@ -1,5 +1,10 @@
-## Connected Components
-
+# Connected Components
+## Run Command
+``` bash
+cd connected _components
+g++ -std=c++17 -O2 driver/driver.cpp src/connected_components.cpp -o connected_components
+./connected_components
+```
 ### System Configuration
 
 - **Algorithm**: Connected Components
