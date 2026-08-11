@@ -1,0 +1,13 @@
+Algorithm: Betweenness Centrality
+Vertex Centrality
+0 6.00
+1 5.00
+2 3.50
+3 0.50
+4 3.50
+5 10.00
+6 2.50
+7 6.00
+8 9.50
+9 7.50
+Execution time: 0.00 ms
