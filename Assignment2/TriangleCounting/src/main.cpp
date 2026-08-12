@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
     for (int i = 0; i < graph.V; i++) {
         std::sort(g.col_idx.begin() + g.row_ptr[i], g.col_idx.begin() + g.row_ptr[i + 1]);
     }
-    bool list_triangles = (graph.V <= 100);
+    bool list_triangles = true;
 
     auto start_time = std::chrono::high_resolution_clock::now();
     TriangleResult result = count_triangles(g, graph.V, list_triangles);
