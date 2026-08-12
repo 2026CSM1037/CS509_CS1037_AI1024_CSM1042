@@ -24,7 +24,6 @@ int main(int argc, char *argv[]) {
     if (!ok) {
         return 1;
     }
-
     CSRGraph g = convert_to_csr(graph);
 
     for (int i = 0; i < graph.V; i++) {
@@ -37,6 +36,21 @@ int main(int argc, char *argv[]) {
     auto end_time = std::chrono::high_resolution_clock::now();
 
     double elapsed_ms = std::chrono::duration<double, std::milli>(end_time - start_time).count();
+    int repeat_count = 1;
+
+    if (elapsed_ms < 5.0) {
+        repeat_count = (elapsed_ms > 0.0)
+                           ? (int)std::min(100000.0, std::max(100.0, 50.0 / elapsed_ms))
+                           : 5000;
+
+        auto rep_start = std::chrono::high_resolution_clock::now();
+        for (int r = 0; r < repeat_count; r++) {
+            count_triangles(g, graph.V, false);
+        }
+        auto rep_end = std::chrono::high_resolution_clock::now();
+
+        elapsed_ms = std::chrono::duration<double, std::milli>(rep_end - rep_start).count() / repeat_count;
+    }
 
     std::cout << "Algorithm: Triangle Counting" << std::endl;
     std::cout << "Total triangles: " << result.total_triangles << std::endl;
@@ -48,7 +62,11 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    std::cout << "Execution time: " << elapsed_ms << " ms" << std::endl;
+    std::cout << "Execution time: " << elapsed_ms << " ms";
+    if (repeat_count > 1) {
+        std::cout << " (averaged over " << repeat_count << " runs)";
+    }
+    std::cout << std::endl;
 
     return 0;
 }
