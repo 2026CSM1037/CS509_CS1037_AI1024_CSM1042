@@ -11,7 +11,7 @@ Compiler: g++ (MinGW-w64 on Windows)
 ```bash
 cd Maxflow_Mincut
 mingw32-make
-./maxflow.exe <input_file>
+./maxflow.exe or ./maxflow.out (depending on OS)
 ```
 
 Direct compile (equivalent to the Makefile target):
