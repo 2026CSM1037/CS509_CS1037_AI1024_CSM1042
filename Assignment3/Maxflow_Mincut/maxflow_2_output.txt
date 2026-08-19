@@ -1,0 +1,1 @@
+Invalid Maxflow-Mincut input (maxflow_2.txt): Malformed adjacency list
